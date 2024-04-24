@@ -1,0 +1,58 @@
+.app-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+  }
+  
+  .app-title {
+    margin-bottom: 20px;
+  }
+  
+  .app-content {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .data-section {
+    flex: 1;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .date-checkbox-list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .date-checkbox-list li {
+    margin-bottom: 10px;
+  }
+  
+  .date-checkbox-list label {
+    margin-left: 8px;
+  }
+  
+  .week-section {
+    flex: 1;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .week-section ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  
+  .week-section li {
+    margin-bottom: 5px;
+  }
+  
