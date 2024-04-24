@@ -10,6 +10,9 @@ const App = () => {
       <div className="App">
         <nav className="navbar">
           <ul className="nav-links">
+          <li>
+              <Link to="/">Home</Link>
+            </li>
             <li>
               <Link to="/task1">Task 1</Link>
             </li>
@@ -22,13 +25,18 @@ const App = () => {
         <Routes>
           <Route path="/task1" element={<Task1 />} />
           <Route path="/task2" element={<Task2 />} />
+          <Route path="/" element={<HomePage />} />
         </Routes>
-
-        <div className='HomePage'>
-          <h1 style={{textAlign: 'center'}}>Welcome to Home Page</h1>
-        </div>
       </div>
     </Router>
+  );
+};
+
+const HomePage = () => {
+  return (
+    <div className='HomePage'>
+      <h1 style={{textAlign: 'center'}}>Welcome to Home Page</h1>
+    </div>
   );
 };
 
