@@ -23,6 +23,10 @@ const App = () => {
           <Route path="/task1" element={<Task1 />} />
           <Route path="/task2" element={<Task2 />} />
         </Routes>
+
+        <div className='HomePage'>
+          <h1 style={{textAlign: 'center'}}>Welcome to Home Page</h1>
+        </div>
       </div>
     </Router>
   );
