@@ -48,26 +48,23 @@ const Task1 = () => {
             });
             currentTime.add(interval, 'minutes');
         }
-
+    
         return (
             <div className="schedule-section">
                 {days.map((day, index) => {
-                    const isPastDay = days.indexOf(day) < days.indexOf(currentDateDay);
+
                     return (
                         <div key={index} className="day">
                             <div className='day-section'><h3>{day}</h3></div>
-                            {isPastDay ? (
-                                <div className="timeslots past">PAST</div>
-                            ) : (
-                                <div className="timeslots">
-                                    {times.map((time, i) => (
-                                        <div key={i} className="timeslot">
-                                            <input type="checkbox" className='timeslot-checkbox' id={`${day}-${time.time}`} />
-                                            <label>{time.time} {time.ampm}</label>
-                                        </div>
-                                    ))}
-                                </div>
-                            )}
+                            <div className="timeslots">
+                                {times.map((time, i) => (
+                                    <div key={i} className="timeslot">
+                                        <input type="checkbox" className='timeslot-checkbox' id={`${day}-${time.time}`} />
+                                        <label>{time.time} {time.ampm}</label>
+                                    </div>
+                                ))}
+                            </div>
+
                         </div>
                     );
                 })}
@@ -83,7 +80,6 @@ const Task1 = () => {
                 <select value={selectedTimezone} onChange={handleTimezoneChange}>
                     <option value="UTC-0">UTC-0</option>
                     <option value="Asia/Kolkata">UTC +5.30</option>
-                    {/* Add more timezones as needed */}
                 </select>
             </div>
         );

@@ -14,14 +14,37 @@ const jsonData = [
     Date: "2023-08-21",
     Time: "09:00"
   },
-  // Add more data as needed
+  {
+    Id: 103,
+    Name: "test 2",
+    Date: "2023-09-19",
+    Time: "09:30"
+  },
+  {
+    Id: 104,
+    Name: "test 3",
+    Date: "2023-07-15",
+    Time: "07:00"
+  },
+  {
+    Id: 105,
+    Name: "test 4",
+    Date: "2023-06-24",
+    Time: "09:21"
+  },
+  {
+    Id: 106,
+    Name: "test 5",
+    Date: "2023-06-11",
+    Time: "11:00"
+  },
 ];
 
 const DateCheckboxList = ({ data, selectedDate, onDateClick }) => {
   return (
     <div className="date-checkbox-list">
       <h2>Dates</h2>
-      <ul>
+      <ul style={{listStyleType: 'none'}}>
         {data.map(item => (
           <li key={item.Id}>
             <input
@@ -29,8 +52,8 @@ const DateCheckboxList = ({ data, selectedDate, onDateClick }) => {
               id={item.Id}
               checked={selectedDate === item.Date}
               onChange={() => onDateClick(item.Date)}
-            />
-            <label htmlFor={item.Id}>{item.Date} ({item.Time})</label>
+            /> 
+            <label htmlFor={item.Id}>{item.Date}  ({item.Time})</label>
           </li>
         ))}
       </ul>
